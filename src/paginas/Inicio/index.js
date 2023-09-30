@@ -1,8 +1,13 @@
+import Banner from "Componentes/Banner"
+
 function Inicio () {
     return (
-        <h1>
-            Olá mundo!
-        </h1>
+        <main>
+            <Banner/>
+            <h1>
+                Olá mundo!
+            </h1>
+        </main>
     )
 }
 
