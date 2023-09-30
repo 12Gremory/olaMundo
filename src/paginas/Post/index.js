@@ -4,6 +4,8 @@ import posts from "json/posts.json"
 import PostModelo from "componentes/PostModelo";
 import "./Post.css"
 import NaoEncontrada from "paginas/NaoEncontrada";
+import PaginaPadrao from "componentes/PaginaPadrao";
+import Sugestao from "componentes/Sugestao";
 
 export default function Post () {
     const parametros = useParams();
@@ -19,15 +21,18 @@ export default function Post () {
     }
 
     return (
-        <PostModelo
-            fotoCapa={`/assets/posts/${post.id}/capa.png`}
-            titulo={post.titulo}
-        >
-            <div className="post-markdown-container">
-                <ReactMarkdown>
-                    {post.texto}
-                </ReactMarkdown>
-            </div>
-        </PostModelo>
+        <PaginaPadrao>
+            <PostModelo
+                fotoCapa={`/assets/posts/${post.id}/capa.png`}
+                titulo={post.titulo}
+            >
+                <div className="post-markdown-container">
+                    <ReactMarkdown>
+                        {post.texto}
+                    </ReactMarkdown>
+                </div>
+            </PostModelo>
+            <Sugestao/>
+        </PaginaPadrao>
     )
 }
