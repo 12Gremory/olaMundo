@@ -1,8 +1,9 @@
-import { Link, useLocation } from "react-router-dom"
-import styles from "./MenuLink.module.css"
+import { Link, useLocation } from 'react-router-dom';
+import styles from './MenuLink.module.css';
 
-function MenuLink ({ children, to }) {
+export default function MenuLink({ children, to }) {
     const localizacao = useLocation();
+
     return (
         <Link className={`
             ${styles.link}
@@ -12,5 +13,3 @@ function MenuLink ({ children, to }) {
         </Link>
     )
 }
-
-export default MenuLink

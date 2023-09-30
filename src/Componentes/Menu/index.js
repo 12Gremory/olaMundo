@@ -1,8 +1,8 @@
-import styles from './menu.module.css'
+import { Link, useLocation } from 'react-router-dom';
 import MenuLink from '../MenuLink';
+import styles from './Menu.module.css';
 
-function Menu () {
-
+export default function Menu() {
     return (
         <header>
             <nav className={styles.navegacao}>
@@ -16,5 +16,3 @@ function Menu () {
         </header>
     )
 }
-
-export default Menu
